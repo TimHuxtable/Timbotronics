@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create User</title>
+    <style>
+        .container {
+            position: absolute;
+            left: 45%;
+            top: 45%;
+        }
+
+        input{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action = "/createUser/createUser.php" method = post>
+        <div class="form-input">
+            <input type="text" name="username" placeholder="Enter the User Name" required/>
+        </div>
+        <div class="form-input">
+            <input type="password" name="password" placeholder="password" required/>
+        </div>
+        <div class="form-input">
+            <input type="text" name="firstName" placeholder="First Name" required/>
+        </div>
+        <div class="form-input">
+            <input type="text" name="lastName" placeholder="Last Name" required/>
+        </div>
+        <input type="submit" type="submit" value="Sign Up" class="btn-login"/>
+    </form>
+</div>
+</body>
+</html>

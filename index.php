@@ -70,11 +70,12 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
             <a target = '_blank' href = '/gameRankings' class = "button">Game Rankings</a></li>
             <a target = '_blank' href = '/Games' class = "button">Games</a></li>
             <a target = '_blank' href = '/ToDo' class = "button">ToDo</a></li>
+            <a target = '_blank' href = '/amazonBot' class = "button">Check Prices</a></li>
 
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			    setInterval(function (){
-                    let date = new Date("2022-06-19");
+                    let date = new Date("2022-06-20");
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;

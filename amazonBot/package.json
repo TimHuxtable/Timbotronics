@@ -1,0 +1,14 @@
+{
+  "name": "amazonbot",
+  "version": "1.0.0",
+  "description": "Check the price of beyerdrynamic 990's\\",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Huxtable",
+  "license": "ISC",
+  "devDependencies": {
+    "puppeteer": "^14.3.0"
+  }
+}

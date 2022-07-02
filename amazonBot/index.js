@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 var http = require("http");
 
 async function main() {
-    const browser = await puppeteer.launch({headless: true});
+    const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
     await page.setViewport({
         width:2560,
@@ -12,10 +12,14 @@ async function main() {
     let link = "https://www.amazon.com/beyerdynamic-Over-Ear-Studio-Headphones-construction/dp/B0011UB9CQ/ref=sr_1_3";
 
     await page.goto(link);
-     const navigationPromise = page.waitForNavigation({waitUntil: "domcontentloaded"});
-//    await page.waitForSelector("#corePrice_feature_div > div > span > span:nth-child(2)", {timeout:10000});
-await navigationPromise;
-    let element = await page.$("#corePrice_feature_div > div > span > span:nth-child(2)");
+    // const navigationPromise = page.waitForNavigation({waitUntil: "domcontentloaded"});
+    // console.log("epic");
+    // await navigationPromise;
+    // console.log("made it here");
+    console.log("i got")
+    sleep(8000);
+    console.log("mine")
+    let element = await page.$("#corePrice_feature_div > div > div > span > span.a-offscreen");
     let price = await page.evaluate(el => el.textContent, element);
     let titleElement = await page.$("#productTitle");
     let title = await page.evaluate(el => el.textContent, titleElement);

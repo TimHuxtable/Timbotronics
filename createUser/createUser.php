@@ -11,7 +11,8 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 $firstname = $_POST["firstName"];
 $lastname = $_POST["lastName"];
-//making password funky
+$email = $_POST["email"];
+//making password encoded for safety of account.
 $passwordHash = password_hash($password,PASSWORD_DEFAULT);
 $database = new mysql_helper();
 
@@ -24,7 +25,8 @@ $database->insert(
         "username"=>$username,
         "passwordHash"=>$passwordHash,
         "firstName"=>$firstname,
-        "lastName"=>$lastname
+        "lastName"=>$lastname,
+        "email" => $email
     ]
 );
 //takes you back to initial page.

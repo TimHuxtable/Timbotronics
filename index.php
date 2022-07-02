@@ -33,9 +33,23 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
 			  display: flex;
 			  justify-content: center
 		}
-		h1, h3, p{
+		h3, p{
 			font-family: 'Times New Roman', serif;
 		}
+		h1 {
+        -webkit-text-stroke: 1px black;
+        font-size: 48px;
+        }
+		/*h1 {*/
+		/*text-shadow: 0 0 3px black;*/
+		/*}*/
+		.multicolortext {
+        background-image: linear-gradient(to left, red, white, blue);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
 		p{
 			font-size:24px;
 		}
@@ -72,10 +86,12 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
             <a target = '_blank' href = '/ToDo' class = "button">ToDo</a></li>
             <a target = '_blank' href = '/amazonBot' class = "button">Check Prices</a></li>
 
+
+			<h1 class = "multicolortext">Time left until the 4th of July!</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			    setInterval(function (){
-                    let date = new Date("2022-06-20");
+                    let date = new Date("2022-07-5");
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;

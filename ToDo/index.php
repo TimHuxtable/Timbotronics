@@ -11,6 +11,8 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
         body {
             margin: 0;
             min-width: 250px;
+            /*this is the background color for the main part of the page*/
+            background: #f9f9f9;
         }
 
         /* Include the padding and border in an element's total width and height */
@@ -30,7 +32,7 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
             position: relative;
             padding: 12px 8px 12px 40px;
             list-style-type: none;
-            background: #eee;
+            background: #C0C0C0;
             font-size: 18px;
             transition: 0.2s;
 

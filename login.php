@@ -131,6 +131,8 @@ function displayLogin(){
         <input type="submit" type="submit" value="Login" class="btn-login"/>
     </form>
     <br><a href = '/createUser'><button >Create User</button></a>
+    <br>   
+    <br><a href = '/resetPassword'><button >Forgot Password!</button></a>
 </div>
 </body>
 </html>

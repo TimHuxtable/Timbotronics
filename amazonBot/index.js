@@ -48,7 +48,7 @@ async function logPrice(price, link, item) {
     });
 
     const options = {
-        hostname: 'timbotronics.xyz',
+        hostname: 'timbotronics.local',
         path: '/amazonBot/prices.php',
         method: 'POST',
         headers: {

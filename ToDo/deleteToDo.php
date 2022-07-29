@@ -1,11 +1,11 @@
 <?php
 
-require_once("/server/data/ApacheData/timbotronics.xyz/mysql_helper.php");
-require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/login.php");
 
 
 $database = new mysql_helper();
-//
+
 $database->select(
     "Session",
     [

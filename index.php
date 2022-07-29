@@ -1,5 +1,5 @@
 <?php
-require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/login.php");
     echo <<<EOT
 
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
 		/*text-shadow: 0 0 3px black;*/
 		/*}*/
 		.multicolortext {
-        background-image: linear-gradient(to left, red, white, blue);
+        background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
@@ -87,11 +87,11 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
             <a target = '_blank' href = '/amazonBot' class = "button">Check Prices</a></li>
 
 
-			<h1 class = "multicolortext">Time left until the 4th of July!</h1>
+			<h1 class = "multicolortext">Time left until Laura BD</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			    setInterval(function (){
-                    let date = new Date("2022-07-5");
+                    let date = new Date("2022-07-27");
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;

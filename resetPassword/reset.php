@@ -16,19 +16,10 @@ if ($userRecord === NULL) {
 require_once("/Server/Data/ApacheData/timbotronics.xyz/Email.php");
 require_once("/Server/Data/ApacheData/timbotronics.xyz/Curl.php");
 
-//code generator
-$code = bin2hex(random_bytes(10));
-
-$link = '<a href = "http://timbotronics.xyz/resetPassword/passwordReset.php?code=' . $code . '" >Reset Password</a>';
-
 Email::send([
     'to' => $usersEmail,
     'subject' => 'Password Reset',
-    'message' => "Click the below link to reset password.<br>{$link}"
+    'message' => 'Test'
 ]);
-
-$database->insert('PasswordReset', ['code' => $code, 'email' => $usersEmail]);
-
-
 
 echo 'password reset string';

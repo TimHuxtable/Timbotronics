@@ -105,7 +105,7 @@ class Email {
 
 
 
-        require_once '/server/data/ApacheData/timbotronics.xyz/SendGrid/sendgrid-php.php';
+        require_once '/Server/Data/ApacheData/timbotronics.xyz/SendGrid/sendgrid-php.php';
         $email = new \SendGrid\Mail\Mail();
         $email->setFrom(self::$config['fromEmail'], self::$config['from']);
         $email->setSubject(self::$config['subject']);

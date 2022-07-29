@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 //path the php file with the helper function, we are calling a function
 //from a different file so we need "require_once" to give this file access to another file.
-require_once("/server/data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
 $username = $_POST["username"];
 $password = $_POST["password"];
 $firstname = $_POST["firstName"];

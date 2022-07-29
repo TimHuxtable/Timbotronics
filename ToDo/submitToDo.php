@@ -1,6 +1,6 @@
 <?php
-require_once("/server/data/ApacheData/timbotronics.xyz/mysql_helper.php");
-require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once("/Server/Data/ApacheData/timbotronics.xyz/login.php");
 // the "Task" here refers to this part -><input name = "Task" type="text" id="myInput" placeholder="Title...">
 $task = $_POST["Task"];
 

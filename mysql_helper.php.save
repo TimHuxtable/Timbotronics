@@ -7,8 +7,8 @@ class mysql_helper
 	private $statement;
 	public function __construct() {
 		$servername = "localhost";
-		$username = "johnscriptdbuser";
-		$password = "oHjZGJ3QDhM7LX6IJYzD";
+		$username = "agile";
+		$password = "0kRi1hiUM6wdtF";
 		$database = "TimboTronics";
 
 		$this->connection = new mysqli($servername, $username, $password, $database);
@@ -23,7 +23,8 @@ class mysql_helper
 
 	public function fetch_assoc($sql = FALSE, $params = []) {
 		if($sql !== FALSE) {
-			$statement = $this->query($sql, $params);
+			$statement = $this->
+query($sql, $params);
 		} else {
 			$statement = $this->statement;
 		}
@@ -148,12 +149,12 @@ class mysql_helper
 		$valuesArr = array();
 
 		foreach ($data as $item)  {
-            if(is_string($item) && strtolower(trim($item)) == 'getdate()') {
-                $valueStr[] = "SYSDATE()";
-            }else{
-                $valueStr[] = "?";
-                $valuesArr[] = $item;
-            }
+			if(is_string($item) && strtolower(trim($item)) == 'getdate()') {
+				$valueStr[] = "getdate()";
+			}else{
+				$valueStr[] = "?";
+				$valuesArr[] = $item;
+			}
 		}
 		$valueStr = implode(',',$valueStr);
 

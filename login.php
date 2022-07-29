@@ -2,7 +2,7 @@
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
-require_once("/server/data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/mysql_helper.php");
 $database = new mysql_helper();
 
 //checking if username is key in the $_POST array. If not send to login.

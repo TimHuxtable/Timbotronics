@@ -104,7 +104,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 
 
 
-			<h1 class = "multicolortext">God's Birthday!</h1>
+			<h1 class = "multicolortext">God's Birthday! & Hunter's</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			    setInterval(function (){

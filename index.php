@@ -84,6 +84,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 	</style>
 </head>
 <body>
+<!--allows code to communicate with the anime.js library-->
 <script src = 'animation/index.js'></script>
 <div class = 'css-block-two'></div>
 	<div class = 'outer'>
@@ -99,13 +100,15 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
             <a id = 'button4' target = '_blank' href = '/Games' class = "button">Games</a></li>
             <a id = 'button5' target = '_blank' href = '/ToDo' class = "button">ToDo</a></li>
             <a id = 'button6' target = '_blank' href = '/amazonBot' class = "button">Check Prices</a></li>
+            <a id = 'button7' target = '_blank' href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley' class = "button">Click here for $$$</a></li>
 
 
-			<h1 class = "multicolortext">Time left until Laura BD</h1>
+
+			<h1 class = "multicolortext">God's Birthday!</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			    setInterval(function (){
-                    let date = new Date("2022-07-27");
+                    let date = new Date("2022-09-30");
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;
@@ -129,26 +132,29 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
                 //width: '%', // -> from '28px' to '100%',
                 loop: true
             });
-            let buttons = document.getElementsByClassName("button");
-            for(button of buttons) {
-                button.onmouseenter = function(event) {
-                    if(!event.target.hovered) {
-                        //event.target.hovered = true;
-                        let rotation = Math.random() * 360;
-                        let hypot = 200;
-                        let x = Math.cos(Math.PI / 180 * rotation) * hypot;
-                        let y = Math.sin(Math.PI / 180 * rotation) * hypot;
-                        anime({
-                            targets: "#" + event.target.id,
-                            translateX: [x, 0],
-                            translateY: [y, 0],
-                            //duration: 1000,
-                            easing: 'easeInOutQuad'
-                        }); 
-                    }
+            //let buttons = document.getElementsByClassName("button");
+            //for(button in buttons) {
+            //to loop through all buttons so they all move, make button7 button below.
+            
+            //setting the event to be fired when the button is hovered.
+            button7.onmouseenter = function(event) {
+                if(!event.target.hovered) {
+                    //event.target.hovered = true;
+                    let rotation = Math.random() * 360;
+                    let radius = 200;
+                    let x = Math.cos(Math.PI / 180 * rotation) * radius;
+                    let y = Math.sin(Math.PI / 180 * rotation) * radius;
+                    anime({
+                        targets: "#button7",
+                        translateX: [x],
+                        translateY: [y],
+                        duration: 1000,
+                        easing: 'spring(1, 80, 10, 0)'
+                    }); 
                 }
             }
-		</script>
+           //}
+        </script>
 	</div>
 </body>
 </html>

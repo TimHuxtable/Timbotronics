@@ -60,7 +60,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
         background-image: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
         -webkit-background-clip: text;
         color: transparent;
-      }
+        }
 		p{
 			font-size:24px;
 		}
@@ -73,7 +73,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 		ul {
 			text-align: left;
 		}
-		body{
+		body {
 			background: url(/resources/mainPageBackground.jpg) no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -107,8 +107,12 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 			<h1 class = "multicolortext">God's Birthday! & Hunter's</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
-			    setInterval(function (){
-                    let date = new Date("2022-09-30");
+			
+			function convertTZ(date, tzString) {
+                return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
+            }
+			    setInterval(function () {
+                    let date = new Date(convertTZ("2022/09/29 05:00:00 +0000", "US/Central"));
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;
@@ -124,7 +128,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 		<script>
             anime({
                 targets: '.css-block-two',
-                translateX: [-500,500],
+                translateX: [-500, 500],
                 duration: 3000,
                 easing: 'easeInOutQuad',
                 direction: 'alternate',

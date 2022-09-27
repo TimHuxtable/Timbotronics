@@ -94,6 +94,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 			<h3>Helpful links listed below for your convenience.</h3>
 
             <!--target = '_blank' href = 'https://www.youtube.com/watch?v=atL2cpD4GdA&ab_channel=DigBarGayRaps-'>THEMESONG</a></li> -->
+            <!-- target = '_blank' is what makes the link open a new tab-->
             <a id = 'button1' target = '_blank' href = '/Cooking' class = "button">Cooking</a></li>
             <a id = 'button2' target = '_blank' href = '/Memes' class = "button">Memes</a></li>
             <a id = 'button3' target = '_blank' href = '/gameRankings' class = "button">Game Rankings</a></li>
@@ -108,10 +109,13 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			
+			//need to use this so that the countdown clock is
+			//accurate to midnight when selecting a date to countdown to.
 			function convertTZ(date, tzString) {
                 return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));
             }
 			    setInterval(function () {
+                    //more accurate countdown, explained above convertTZ.
                     let date = new Date(convertTZ("2022/09/29 05:00:00 +0000", "US/Central"));
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();

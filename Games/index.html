@@ -8,6 +8,34 @@
 <body>
 <!-- Video Source -->
 <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+<div class = "box-area">
+    <header class = "banner">
+        <div class = "wrapper">
+            <div class = "logo2">
+                <a href = "#">Timbotronics</a>
+            </div>
+
+            <nav>
+                <a href = "#">Home</a>
+                <a href = "#">Home</a>
+                <a href = "#">Home</a>
+                <a href = "#">Home</a>
+                <a href = "#">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class = "banner-area">
+        <h2>Fixed Banner</h2>
+    </div>
+
+    <div class = "content-area">
+        <div class = "wrapper">
+            <h2>Text details</h2>
+        </div>
+    </div>
+</div>
+
 <section class="showcase">
     <header>
         <h2 class="logo">Games</h2>
@@ -32,13 +60,22 @@
 </section>
 <div class="menu">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Destination</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href = "https://timbotronics.xyz/">Home</a></li>
+        <li><a href = "https://www.msnbc.com/">News</a></li>
+        <li><a href = "#">Destination</a></li>
+        <li><a href = "#">Blog</a></li>
     </ul>
 </div>
+
+<script>
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+    })
+</script>
 
 </body>
 </html>

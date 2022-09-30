@@ -3,7 +3,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
     echo <<<EOT
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>TimboTronics</title>
 	<style>
@@ -105,7 +105,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 
 
 
-			<h1 class = "multicolortext">God's Birthday! & Hunter's</h1>
+			<h1 class = "multicolortext">Dad's Birthday!</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			
@@ -116,7 +116,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
             }
 			    setInterval(function () {
                     //more accurate countdown, explained above convertTZ.
-                    let date = new Date(convertTZ("2022/09/29 05:00:00 +0000", "US/Central"));
+                    let date = new Date(convertTZ("2022/10/20 05:00:00 +0000", "US/Central"));
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;

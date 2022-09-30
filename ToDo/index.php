@@ -1,5 +1,7 @@
 <?php
 require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
+/*require_once($_SERVER["DOCUMENT_ROOT"] . "/ToDo/pullToDo.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/ToDo/submitToDo.php");*/
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +137,8 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 <body>
 
 <div id="myDIV" class="header">
-    <h2 style="margin:5px">Things To Do Today</h2>
+<!--    using the php like this allows me to insert the code from another file cleanly here-->
+    <h2 style="margin:5px"><?php require_once($_SERVER["DOCUMENT_ROOT"] . "/ToDo/readUser.php")?>'s Todo list!</h2>
     <form method = post action = "/ToDo/submitToDo.php">
         <input name = "Task" type="text" id="myInput" placeholder="Title..." required>
         <!--<span onclick="newElement()" class="addBtn">Add</span>-->

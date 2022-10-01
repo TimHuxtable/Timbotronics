@@ -89,7 +89,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 <div class = 'css-block-two'></div>
 	<div class = 'outer'>
 		<div class = 'header'>
-			<h1>Welcome To TimboTronics!</h1>
+			<h1>Welcome to TimboTronics!</h1>
 			<p>A random webpage!</p>
 			<h3>Helpful links listed below for your convenience.</h3>
 

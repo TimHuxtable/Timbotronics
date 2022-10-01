@@ -229,7 +229,7 @@ class mysql_helper
 	 * @param string[] $filters keys are columns, values are filters
 	 * @throws Exception
 	 */
-	function delete($table, $filters){
+	function delete($table, $filters) {
 		$query = "DELETE FROM {$table} WHERE ";
 		$filterValuesArr = [];
 		if( count($filters) > 0 ){

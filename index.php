@@ -5,7 +5,13 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>TimboTronics</title>
+<!--
+<link rel="icon" type="image/x-icon" href="https://timbotronics.xyz/favicon.ico" />
+-->
+<link rel="shortcut icon" href="https://timbotronics.xyz/favicon2.ico" type="image/x-icon">
+<link rel="icon" href="https://timbotronics.xyz/favicon2.ico" type="image/x-icon">
+
+    <title>TimboTronics</title>
 	<style>
 	    .button {
             background-color: #23AEDF;
@@ -65,7 +71,6 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 			font-size:24px;
 		}
 		.list {
-			display: inline-block;
 			width:100%;
 			display: flex;
 			justify-content: center

@@ -22,26 +22,17 @@
                 <a href = "#">Home</a>
             </nav>
         </div>
-    </header>
-
-    <div class = "banner-area">
-        <h2>Fixed Banner</h2>
-    </div>
-
-    <div class = "content-area">
-        <div class = "wrapper">
-            <h2>Text details</h2>
-        </div>
-    </div>
-</div>
-
-<section class="showcase">
-    <header>
-        <h2 class="logo">Games</h2>
         <div class="toggle"></div>
     </header>
+</div>
+
+<div class = 'background'>
     <video src="../resources/TableHockey.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
+</div>
+<section class="showcase">
+<!--    <header>-->
+<!--        <h2 class="logo">Games</h2>-->
+<!--    </header>-->
     <div class="text">
         <h2>Never Stop</h2>
         <h3>Exploring The World</h3>
@@ -68,11 +59,11 @@
 
 <script>
     const menuToggle = document.querySelector('.toggle')
-    const showcase = document.querySelector('.showcase')
+    const menu = document.querySelector('.menu')
 
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active')
-        showcase.classList.toggle('active')
+        menu.classList.toggle('active')
     })
 </script>
 

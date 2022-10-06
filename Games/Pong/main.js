@@ -1,7 +1,7 @@
 // Canvas Pong
 
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
+let canvas = document.getElementById('canvas');
+let context = canvas.getContext('2d');
 
 // Key Codes
 var W = 87;

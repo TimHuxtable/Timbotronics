@@ -5,14 +5,74 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--
-<link rel="icon" type="image/x-icon" href="https://timbotronics.xyz/favicon.ico" />
--->
 <link rel="shortcut icon" href="https://timbotronics.xyz/favicon2.ico" type="image/x-icon">
 <link rel="icon" href="https://timbotronics.xyz/favicon2.ico" type="image/x-icon">
 
     <title>TimboTronics</title>
 	<style>
+        .wrapper{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background: #3366cc;
+            /*
+            position: fixed;
+            */
+        }
+        .logo2 {
+            width: 30%;
+            float: left;
+            text-align: left;
+            line-height: 50px;
+        }
+        .logo2 a{
+            text-decoration: none;
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            letter-spacing: 4px;
+        }
+        .logo{
+            width: 30%;
+            float: left;
+            text-align: left;
+            line-height: 50px;
+        }
+        nav {
+            float: right;
+            /*padding-right: 10%;*/
+            line-height: 50px;
+        }
+        nav a {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 4px;
+            font-size: 20px;
+            color: #fff;
+            padding: 36px 10px;
+            margin: 0 1px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            background: #fff;
+            color: #130f40;
+            font-weight: 700;
+        }
+        .banner {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*padding: 40px 100px;*/
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 	    .button {
             background-color: #23AEDF;
             border: none;
@@ -40,11 +100,11 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
         }
 		@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
 		.header{
-			margin-top:10%;
+			margin-top:3%;
 			text-align: center;
 			background-color: white;
 			display: inline-block;
-			padding: 50px;
+			padding: 20px;
 			border-radius: 10px;
 		}
 		.outer{
@@ -80,22 +140,55 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 		}
 		body {
 			background: url(/resources/mainPageBackground.jpg) no-repeat center center fixed;
+			margin: 0;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
-			background-size: cover;
+			background-size: auto;
 			overflow: hidden;
 		}
+		@media (max-width: 991px) {
+        .showcase,
+        .showcase header
+        {
+            padding: 40px;
+        }
+        .text h2
+        {
+            font-size: 3em;
+        }
+        .text h3
+        {
+            font-size: 2em;
+        }
 	</style>
 </head>
 <body>
+
+<div class = "box-area">
+    <header class = "banner">
+        <div class = "wrapper">
+            <div class = "logo2">
+                <a href = "https://timbotronics.xyz/">Timbotronics</a>
+            </div>
+
+            <nav>
+                <a href = "https://timbotronics.xyz/Cooking">Cooking</a>
+                <a href = "https://timbotronics.xyz/Memes">Memes</a>
+                <a href = "https://timbotronics.xyz/beach.ico">Beach</a>
+            </nav>
+        </div>
+        <div class="toggle"></div>
+    </header>
+</div>
+
 <!--allows code to communicate with the anime.js library-->
 <script src = 'animation/index.js'></script>
 <div class = 'css-block-two'></div>
 	<div class = 'outer'>
 		<div class = 'header'>
 			<h1>Welcome to TimboTronics!</h1>
-			<p>A random webpage!</p>
+			<p>Created by Tim!</p>
 			<h3>Helpful links listed below for your convenience.</h3>
 
             <!--target = '_blank' href = 'https://www.youtube.com/watch?v=atL2cpD4GdA&ab_channel=DigBarGayRaps-'>THEMESONG</a></li> -->
@@ -113,7 +206,6 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 			<h1 class = "multicolortext">Dad's Birthday!</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
-			
 			//need to use this so that the countdown clock is
 			//accurate to midnight when selecting a date to countdown to.
 			function convertTZ(date, tzString) {

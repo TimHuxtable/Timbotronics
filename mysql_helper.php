@@ -6,9 +6,9 @@ class mysql_helper
 	private $connection;
 	private $statement;
 	public function __construct() {
-		$servername = "localhost";
-		$username = "agile";
-		$password = "0kRi1hiUM6wdtF";
+		$servername = "127.0.0.1";
+		$username = "tph4";
+		$password = "WhyAr3Y0uGay?";
 		$database = "TimboTronics";
 
 		$this->connection = new mysqli($servername, $username, $password, $database);

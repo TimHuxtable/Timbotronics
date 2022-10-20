@@ -12,7 +12,7 @@ async function run() {
     // wait a bit so that the browser finishes executing JavaScript
     await page.waitFor(1 * 1000);
     const html = await page.content();
-    fs.writeFileSync("index.html", html);
+    fs.writeFileSync("index.php", html);
     await browser.close();
 }
 

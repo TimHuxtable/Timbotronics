@@ -7,10 +7,15 @@ class mysql_helper
 	private $statement;
 	public function __construct() {
 		$servername = "127.0.0.1";
-		$username = "tph4";
-		$password = "WhyAr3Y0uGay?";
+        if(getenv('PHPENV')==="DEV") {
+            $username = "agile";
+            $password = "0kRi1hiUM6wdtF";
+        } else {
+            $username = "tph4";
+            $password = "WhyAr3Y0uGay?";
+        }
 		$database = "TimboTronics";
-
+//hello
 		$this->connection = new mysqli($servername, $username, $password, $database);
 		if ($this->connection->connect_error) {
 			die("Connection failed: " . $this->connection->connect_error);

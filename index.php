@@ -204,7 +204,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 
 
 
-			<h1 class = "multicolortext">Countdown to Birthday!</h1>
+			<h1 class = "multicolortext">Countdown to Kyles Birthday!</h1>
 			<h2 style ="color: lightcoral" id="timer"></h2>
 			<script>
 			//need to use this so that the countdown clock is
@@ -214,7 +214,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
             }
 			    setInterval(function () {
                     //more accurate countdown, explained above convertTZ.
-                    let date = new Date(convertTZ("2023/09/29 05:00:00 +0000", "US/Central"));
+                    let date = new Date(convertTZ("2023/07/15 05:00:00 +0000", "US/Central"));
                     let now = new Date();
                     let difference = date.getTime() - now.getTime();
                     difference = difference / 1000;

@@ -1,5 +1,5 @@
 <?php
-require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/mysql_helper.php");
 $game = $_POST["game"];
 $score = $_POST["score"];
 

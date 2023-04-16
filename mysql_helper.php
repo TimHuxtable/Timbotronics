@@ -6,11 +6,15 @@ class mysql_helper
 	private $connection;
 	private $statement;
 	public function __construct() {
-		$servername = "localhost";
-		$username = "johnscriptdbuser";
-		$password = "oHjZGJ3QDhM7LX6IJYzD";
+		$servername = "127.0.0.1";
+        if(getenv('PHPENV')==="DEV") {
+            $username = "agile";
+            $password = "0kRi1hiUM6wdtF";
+        } else {
+            $username = "tph4";
+            $password = "WhyAr3Y0uGay?";
+        }
 		$database = "TimboTronics";
-
 		$this->connection = new mysqli($servername, $username, $password, $database);
 		if ($this->connection->connect_error) {
 			die("Connection failed: " . $this->connection->connect_error);
@@ -229,7 +233,7 @@ class mysql_helper
 	 * @param string[] $filters keys are columns, values are filters
 	 * @throws Exception
 	 */
-	function delete($table, $filters){
+	function delete($table, $filters) {
 		$query = "DELETE FROM {$table} WHERE ";
 		$filterValuesArr = [];
 		if( count($filters) > 0 ){

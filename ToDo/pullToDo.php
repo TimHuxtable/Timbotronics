@@ -1,7 +1,7 @@
 <?php
 
-require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
-require_once("/Server/Data/ApacheData/timbotronics.xyz/login.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/mysql_helper.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 
 
 $database = new mysql_helper();

@@ -1,5 +1,5 @@
 <?php
-require_once("/server/data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/mysql_helper.php");
 
 $inputs = file_get_contents("php://input");
 $inputs = json_decode($inputs, TRUE);

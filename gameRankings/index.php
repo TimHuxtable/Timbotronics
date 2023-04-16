@@ -1,5 +1,5 @@
 <?php
-require_once("/Server/Data/ApacheData/timbotronics.xyz/login.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 echo <<<EOT
 <!DOCTYPE html>
 <html>

@@ -149,7 +149,8 @@ class Email {
         }
 
         $email->addContent("text/html", self::$config['message']);
-        $password = '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';
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/Secrets/SendGrid.php");
+        $password = $sendGridApiKey;
 
         $sendgrid = new \SendGrid($password);
         try {

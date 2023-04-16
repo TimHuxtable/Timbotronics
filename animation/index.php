@@ -1,5 +1,5 @@
 <?php
-require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 ?>
 
 <!DOCTYPE html>
@@ -45,12 +45,49 @@ require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
             color: inherit;
             text-decoration: inherit;
         }
+
+        .css-selector-demo {
+            width:100px;
+            height:100px;
+            background-color: mediumpurple;
+        }
+        .css-block-two {
+            width:100px;
+            height:100px;
+            background-color: gold;
+        }
     </style>
 </head>
 <body>
 
-<script>
+<script src = 'index.js'></script>
 
+<div class = 'css-selector-demo'></div>
+
+<div class = 'css-block-two'></div>
+
+<script>
+    anime({
+        targets: '.css-selector-demo',
+        left: '0px',
+        translateX: 1000,
+        duration: 3000,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        loop: true
+    });
+
+    anime({
+        targets: '.css-block-two',
+        left: '300px',
+        translateX: 700,
+        duration: 3000,
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        rotate: 540,
+        width: '100%', // -> from '28px' to '100%',
+        loop: true
+    });
 </script>
 
 </body>

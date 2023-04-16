@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 var http = require("http");
 
 async function main() {
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.setViewport({
         width:2560,
@@ -48,7 +48,7 @@ async function logPrice(price, link, item) {
     });
 
     const options = {
-        hostname: 'timbotronics.xyz',
+        hostname: 'timbotronics.local',
         path: '/amazonBot/prices.php',
         method: 'POST',
         headers: {

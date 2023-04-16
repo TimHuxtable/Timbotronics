@@ -1,5 +1,5 @@
 <?php
-require_once("/Server/Data/ApacheData/timbotronics.xyz/mysql_helper.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/mysql_helper.php");
 
 $usersEmail = $_POST['email'];
 
@@ -13,8 +13,8 @@ if ($userRecord === NULL) {
     exit();
 }
 
-require_once("/Server/Data/ApacheData/timbotronics.xyz/Email.php");
-require_once("/Server/Data/ApacheData/timbotronics.xyz/Curl.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/Email.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/Curl.php");
 
 Email::send([
     'to' => $usersEmail,

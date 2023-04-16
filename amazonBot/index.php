@@ -1,5 +1,5 @@
 <?php
-require_once("/server/data/ApacheData/timbotronics.xyz/login.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/login.php");
 ?>
 
 <!DOCTYPE html>
